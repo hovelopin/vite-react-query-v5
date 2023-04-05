@@ -3,6 +3,7 @@ import Comment from '../components/Comment';
 import Photo from '../components/Photo';
 import CommentErrorBoundary from '../query/error/boundary/CommentErrorBoundary';
 import PhotoErrorBoundary from '../query/error/boundary/PhotoErrorBoundary';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function Home() {
   return (
@@ -13,12 +14,26 @@ export default function Home() {
         }}
       >
         <PhotoErrorBoundary>
-          <Suspense fallback={<div>Photo loading...</div>}>
+          <Suspense
+            fallback={
+              <>
+                <CircularProgress />
+                <div>Photo Suspense</div>
+              </>
+            }
+          >
             <Photo />
           </Suspense>
         </PhotoErrorBoundary>
         <CommentErrorBoundary>
-          <Suspense fallback={<div>Comment loading...</div>}>
+          <Suspense
+            fallback={
+              <>
+                <CircularProgress />
+                <div>Comment Suspense</div>
+              </>
+            }
+          >
             <Comment />
           </Suspense>
         </CommentErrorBoundary>

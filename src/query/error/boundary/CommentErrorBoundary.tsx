@@ -1,6 +1,6 @@
 import { useQueryErrorResetBoundary } from '@tanstack/react-query';
 import { ErrorBoundary } from 'react-error-boundary';
-import PhotoFallbackRender from '../render/PhotoFallbackRender';
+import CommentFallbackRender from '../render/CommentRenderFallback';
 
 export default function CommentErrorBoundary({ children }: { children: React.ReactNode }) {
   const { reset } = useQueryErrorResetBoundary();
@@ -9,7 +9,7 @@ export default function CommentErrorBoundary({ children }: { children: React.Rea
     <ErrorBoundary
       onReset={reset}
       fallbackRender={({ error, resetErrorBoundary }) => (
-        <PhotoFallbackRender resetErrorBoundary={resetErrorBoundary} error={error} />
+        <CommentFallbackRender resetErrorBoundary={resetErrorBoundary} error={error} />
       )}
     >
       {children}

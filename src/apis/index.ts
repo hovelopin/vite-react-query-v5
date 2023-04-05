@@ -1,8 +1,8 @@
 import http from './http';
 
-const photo = {
+const jsonApi = {
   getAll: () => http.get('https://jsonplaceholder.typicode.com/photos'),
   getCommentList: () => http.get('https://jsonplaceholder.typicode.com/comments'),
 };
 
-export default photo;
+export default jsonApi;

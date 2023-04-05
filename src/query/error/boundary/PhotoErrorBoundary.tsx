@@ -1,8 +1,8 @@
 import { useQueryErrorResetBoundary } from '@tanstack/react-query';
 import { ErrorBoundary } from 'react-error-boundary';
-import PhotoFallbackRender from './PhotoFallbackRender';
+import PhotoFallbackRender from '../render/PhotoFallbackRender';
 
-const QueryErrorBoundary = ({ children }: { children: React.ReactNode }) => {
+const PhotoErrorBoundary = ({ children }: { children: React.ReactNode }) => {
   const { reset } = useQueryErrorResetBoundary();
 
   return (
@@ -19,4 +19,4 @@ const QueryErrorBoundary = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default QueryErrorBoundary;
+export default PhotoErrorBoundary;

@@ -1,7 +1,11 @@
-export default function Comment({ data }: any) {
+import useCommentQuery from '../query/useCommentQuery';
+
+export default function Comment() {
+  const { data: commentList } = useCommentQuery();
+
   return (
     <div>
-      {data?.data.map((el: any, idx: number) => {
+      {commentList?.data.map((el: any, idx: number) => {
         return (
           <div key={idx}>
             <div>{el.id}</div>

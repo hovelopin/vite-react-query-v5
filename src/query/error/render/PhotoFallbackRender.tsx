@@ -1,4 +1,4 @@
-import getErrorMessage from './getErrorMessage';
+import getErrorMessage from '../getErrorMessage';
 
 export default function PhotoFallbackRender({ error, resetErrorBoundary }: any) {
   // 정의해놓은 HTTP Error Status를 넘겨줘서 FallbackRender에 넘겨준다.

@@ -1,7 +1,11 @@
-export default function Photo({ data }: any) {
+import usePhotoQuery from '../query/usePhotoQuery';
+
+export default function Photo() {
+  const { data: photoList } = usePhotoQuery();
+
   return (
     <div>
-      {data?.data.map((el: any, idx: number) => {
+      {photoList?.data.map((el: any, idx: number) => {
         return (
           <div key={idx}>
             <div>{el.id}</div>

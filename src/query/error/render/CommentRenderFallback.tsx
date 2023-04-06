@@ -1,5 +1,4 @@
 export default function CommentFallbackRender({ resetErrorBoundary }: any) {
-  // 정의해놓은 HTTP Error Status를 넘겨줘서 FallbackRender에 넘겨준다.
   return (
     <>
       <div>

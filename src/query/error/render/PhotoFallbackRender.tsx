@@ -1,4 +1,4 @@
-export default function PhotoFallbackRender({ error, resetErrorBoundary }: any) {
+export default function PhotoFallbackRender({ resetErrorBoundary }: any) {
   return (
     <>
       <div>

@@ -5,6 +5,7 @@ import getErrorMessage from '../query/error/getErrorMessage';
 // 인자로 전달받은 컴포넌트는 출력함수에서 그대로 구현하면 됩니다.
 export default function WithError(WrappedComponent: any) {
   return function WithErrorComponent({ errors, ...props }: any) {
+    // 정의해놓은 HTTP Error Status를 넘겨줘서 FallbackRender에 넘겨준다.
     const { title, content }: any = getErrorMessage(errors.response.status);
 
     return (

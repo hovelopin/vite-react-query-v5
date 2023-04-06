@@ -8,6 +8,7 @@ const PhotoErrorBoundary = ({ children }: { children: React.ReactNode }) => {
   return (
     <ErrorBoundary
       // ErrorBoundary에서 Capture된 에러를 초기화시켜주기 위해 reset을 호출한다.
+      // Reset the state of your app so the error doesn't happen again
       onReset={reset}
       // Error가 났을때 보여줄 UI를 넘겨준다. 이때 , resetErrorBoundary를 넘겨줘서 데이터를 받아오기 위해 다시 시도한다.
       fallbackRender={({ error, resetErrorBoundary }) => (
